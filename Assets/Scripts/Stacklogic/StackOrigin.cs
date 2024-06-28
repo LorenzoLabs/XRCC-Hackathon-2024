@@ -1,21 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class StackOrigin : MonoBehaviour
+
+namespace GameManagers
 {
-    //this class has the location of the Stackable object
-
-    
-    // Start is called before the first frame update
-    void Start()
+    [CreateAssetMenu(fileName = "New Game Phase", menuName = "CrypticCabinet/Game Phase")]
+    public class StackOrigin : MonoBehaviour
     {
-        
-    }
+        //this class has the location of the Stackable object
+        /// <summary>
+        ///     Represents a game phase for the gameplay.
+        /// </summary>
+        [TextArea, SerializeField] private string m_gamePhaseDescription;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void Initialize()
+        {
+            InitializeInternal();
+        }
+
+        public void Deinitialize()
+        {
+            DeinitializeInternal();
+        }
+
+        protected virtual void InitializeInternal()
+        {
+            // Handle initialization on child class, if needed.
+        }
+
+        protected virtual void DeinitializeInternal()
+        {
+            // Handle de-initialization on child class, if needed.
+        }
     }
 }
+
