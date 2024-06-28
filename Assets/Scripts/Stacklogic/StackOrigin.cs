@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class StackOrigin : MonoBehaviour
 {
+    //this class has the location of the Stackable object
+
+    
     // Start is called before the first frame update
     void Start()
     {
