@@ -4592,7 +4592,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 356600329}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cc5c234723e3a54d8dd09b131117743, type: 3}
   m_Name: 
@@ -7649,7 +7649,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 681981591}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cc5c234723e3a54d8dd09b131117743, type: 3}
   m_Name: 
@@ -12300,7 +12300,7 @@ MonoBehaviour:
   requestBodyTrackingPermissionOnStartup: 0
   requestFaceTrackingPermissionOnStartup: 0
   requestEyeTrackingPermissionOnStartup: 0
-  requestScenePermissionOnStartup: 0
+  requestScenePermissionOnStartup: 1
   requestRecordAudioPermissionOnStartup: 0
   _localDimming: 1
   _trackingOriginType: 1
@@ -21464,10 +21464,25 @@ PrefabInstance:
       propertyPath: SortKey
       value: 3982959143
       objectReference: {fileID: 0}
+    - target: {fileID: 858398035662927711, guid: 54838be5c2b94ac48966ed8f2d40758b,
+        type: 3}
+      propertyPath: m_TagString
+      value: grabbable
+      objectReference: {fileID: 0}
     - target: {fileID: 1023692802784010838, guid: 54838be5c2b94ac48966ed8f2d40758b,
         type: 3}
       propertyPath: SortKey
       value: 1806223455
+      objectReference: {fileID: 0}
+    - target: {fileID: 1135571692962717769, guid: 54838be5c2b94ac48966ed8f2d40758b,
+        type: 3}
+      propertyPath: m_TagString
+      value: grabbable
+      objectReference: {fileID: 0}
+    - target: {fileID: 1347354764742841241, guid: 54838be5c2b94ac48966ed8f2d40758b,
+        type: 3}
+      propertyPath: m_TagString
+      value: grabbable
       objectReference: {fileID: 0}
     - target: {fileID: 1502112578374685807, guid: 54838be5c2b94ac48966ed8f2d40758b,
         type: 3}
@@ -21489,10 +21504,20 @@ PrefabInstance:
       propertyPath: SortKey
       value: 3387053944
       objectReference: {fileID: 0}
+    - target: {fileID: 5224981961846016400, guid: 54838be5c2b94ac48966ed8f2d40758b,
+        type: 3}
+      propertyPath: m_TagString
+      value: grabbable
+      objectReference: {fileID: 0}
     - target: {fileID: 5575344395917696153, guid: 54838be5c2b94ac48966ed8f2d40758b,
         type: 3}
       propertyPath: SortKey
       value: 802928970
+      objectReference: {fileID: 0}
+    - target: {fileID: 5612108654165162001, guid: 54838be5c2b94ac48966ed8f2d40758b,
+        type: 3}
+      propertyPath: m_TagString
+      value: grabbable
       objectReference: {fileID: 0}
     - target: {fileID: 6357827846904118265, guid: 54838be5c2b94ac48966ed8f2d40758b,
         type: 3}
@@ -21554,6 +21579,16 @@ PrefabInstance:
       propertyPath: SortKey
       value: 1845930987
       objectReference: {fileID: 0}
+    - target: {fileID: 7856690885846137352, guid: 54838be5c2b94ac48966ed8f2d40758b,
+        type: 3}
+      propertyPath: m_TagString
+      value: grabbable
+      objectReference: {fileID: 0}
+    - target: {fileID: 7990737272198376112, guid: 54838be5c2b94ac48966ed8f2d40758b,
+        type: 3}
+      propertyPath: m_TagString
+      value: grabbable
+      objectReference: {fileID: 0}
     - target: {fileID: 8229407754615690747, guid: 54838be5c2b94ac48966ed8f2d40758b,
         type: 3}
       propertyPath: SortKey
@@ -21563,6 +21598,11 @@ PrefabInstance:
         type: 3}
       propertyPath: SortKey
       value: 962332391
+      objectReference: {fileID: 0}
+    - target: {fileID: 9046969006785985115, guid: 54838be5c2b94ac48966ed8f2d40758b,
+        type: 3}
+      propertyPath: m_TagString
+      value: grabbable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

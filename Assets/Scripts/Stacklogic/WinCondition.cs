@@ -10,12 +10,10 @@ public class WinCondition : MonoBehaviour
     private float timer;
     private float timerThreshold = 3f; 
 
-
-
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.tag);
-        if (other.CompareTag("NetworkedObject"))
+        Debug.Log("Collided trigger enter with: " + other.gameObject.tag);
+        if (other.CompareTag("grabbable"))
         {
             isTimerRunning = true;
         }
@@ -23,7 +21,7 @@ public class WinCondition : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("NetworkedObject"))
+        if (other.CompareTag("grabbable"))
         {
             isTimerRunning = false;
             timer = 0f; // Reset timer when the grabbable object exits
