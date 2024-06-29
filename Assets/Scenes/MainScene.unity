@@ -21459,10 +21459,55 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 431817277798800786, guid: 54838be5c2b94ac48966ed8f2d40758b,
+        type: 3}
+      propertyPath: SortKey
+      value: 1761056490
+      objectReference: {fileID: 0}
+    - target: {fileID: 651538540405535577, guid: 54838be5c2b94ac48966ed8f2d40758b,
+        type: 3}
+      propertyPath: SortKey
+      value: 1508591825
+      objectReference: {fileID: 0}
     - target: {fileID: 1502112578374685807, guid: 54838be5c2b94ac48966ed8f2d40758b,
         type: 3}
       propertyPath: m_Name
       value: NetworkedObjectsManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2439578463914636067, guid: 54838be5c2b94ac48966ed8f2d40758b,
+        type: 3}
+      propertyPath: _spawnAllObjects
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594288625761957461, guid: 54838be5c2b94ac48966ed8f2d40758b,
+        type: 3}
+      propertyPath: SortKey
+      value: 2405913451
+      objectReference: {fileID: 0}
+    - target: {fileID: 2852674384732493298, guid: 54838be5c2b94ac48966ed8f2d40758b,
+        type: 3}
+      propertyPath: SortKey
+      value: 3507912116
+      objectReference: {fileID: 0}
+    - target: {fileID: 4073283582936690870, guid: 54838be5c2b94ac48966ed8f2d40758b,
+        type: 3}
+      propertyPath: SortKey
+      value: 1427245671
+      objectReference: {fileID: 0}
+    - target: {fileID: 4709115940146227847, guid: 54838be5c2b94ac48966ed8f2d40758b,
+        type: 3}
+      propertyPath: SortKey
+      value: 3737873915
+      objectReference: {fileID: 0}
+    - target: {fileID: 4954186333458936145, guid: 54838be5c2b94ac48966ed8f2d40758b,
+        type: 3}
+      propertyPath: SortKey
+      value: 4036764946
+      objectReference: {fileID: 0}
+    - target: {fileID: 5009155515948256093, guid: 54838be5c2b94ac48966ed8f2d40758b,
+        type: 3}
+      propertyPath: SortKey
+      value: 4140508991
       objectReference: {fileID: 0}
     - target: {fileID: 6357827846904118265, guid: 54838be5c2b94ac48966ed8f2d40758b,
         type: 3}
@@ -21513,6 +21558,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7434518490038130118, guid: 54838be5c2b94ac48966ed8f2d40758b,
+        type: 3}
+      propertyPath: SortKey
+      value: 1982431913
+      objectReference: {fileID: 0}
+    - target: {fileID: 7557929200086259181, guid: 54838be5c2b94ac48966ed8f2d40758b,
+        type: 3}
+      propertyPath: SortKey
+      value: 2044921442
+      objectReference: {fileID: 0}
+    - target: {fileID: 8443785742373840209, guid: 54838be5c2b94ac48966ed8f2d40758b,
+        type: 3}
+      propertyPath: SortKey
+      value: 3577661656
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907690123114224122, guid: 54838be5c2b94ac48966ed8f2d40758b,
+        type: 3}
+      propertyPath: SortKey
+      value: 368613933
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
