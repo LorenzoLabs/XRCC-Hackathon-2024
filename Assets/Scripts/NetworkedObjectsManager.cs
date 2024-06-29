@@ -6,27 +6,34 @@ using Random = UnityEngine.Random;
 
 public class NetworkedObjectsManager : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> _networkedObjectPrefabs;
+    [SerializeField] private Transform _networkedObjectPool;
     [SerializeField] private int _minNumberOfNetworkedObjects;
-    [SerializeField] private int _maxNumberOfNetworkedObjects;
 
     // Control variable to ensure spawning only happens once.
     private bool _isSpawned = false;
+
+    void Awake()
+    {
+        foreach (Transform networkedObject in _networkedObjectPool.transform)
+        {
+            networkedObject.gameObject.SetActive(false);
+        }
+    }
 
     public void SpawnNetworkedObjects()
     {
         if (_isSpawned) return;
         _isSpawned = true;
 
-        int numberOfNetworkedObject = Random.Range(_minNumberOfNetworkedObjects, _maxNumberOfNetworkedObjects + 1);
-        for (int i = 0; i < numberOfNetworkedObject; ++i)
+        int numberOfNetworkedObjectsToSpawn = Random.Range(Math.Max(_minNumberOfNetworkedObjects, _networkedObjectPool.childCount), _networkedObjectPool.childCount);
+        for (int i = 0; i < numberOfNetworkedObjectsToSpawn; ++i)
         {
-            int randomNetworkedObjectPrefabIndex = Random.Range(0, _networkedObjectPrefabs.Count);
-            GameObject randomNetworkedObjectPrefab = _networkedObjectPrefabs[randomNetworkedObjectPrefabIndex];
-            Tuple<Vector3, Quaternion> validSpawnPoint = GetValidSpawnPoint(_networkedObjectPrefabs[randomNetworkedObjectPrefabIndex]);
+            Transform networkedObject = _networkedObjectPool.GetChild(i);
+            Tuple<Vector3, Quaternion> validSpawnPoint = GetValidSpawnPoint(networkedObject.gameObject);
             Quaternion randomRotation = Quaternion.Euler(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
 
-            Instantiate(randomNetworkedObjectPrefab, validSpawnPoint.Item1, randomRotation * validSpawnPoint.Item2, transform);
+            networkedObject.SetPositionAndRotation(validSpawnPoint.Item1, randomRotation * validSpawnPoint.Item2);
+            networkedObject.gameObject.SetActive(true);
         }
     }
 
