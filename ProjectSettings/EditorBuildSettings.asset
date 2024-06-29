@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Samples/Meta XR Interaction SDK/66.0.0/Example Scenes/HandGrabExamples.unity
     guid: 39ae0e546b9edc0408d3b11c6a7c2814
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameStart_StackingPhysics.unity
     guid: 251721d9810d54ccca5a5167cb6e6dbd
+  - enabled: 1
+    path: Assets/Scenes/MultiplayerTestScene.unity
+    guid: cc268800f7e2b034cb53549ff62e41c6
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: e196f5ac6c86145faa56cf39d44e8321,
       type: 2}
