@@ -1,12 +1,12 @@
-using System;
-using System.Collections.Generic;
 using Meta.XR.MRUtilityKit;
+using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class NetworkedObjectsManager : MonoBehaviour
 {
     [SerializeField] private Transform _networkedObjectPool;
+    [SerializeField] private Transform _stackOrigintPool;
     [SerializeField] private int _minNumberOfNetworkedObjects;
 
     // Control variable to ensure spawning only happens once.
@@ -17,6 +17,11 @@ public class NetworkedObjectsManager : MonoBehaviour
         foreach (Transform networkedObject in _networkedObjectPool.transform)
         {
             networkedObject.gameObject.SetActive(false);
+        }
+
+        foreach (Transform stackOrigin in _stackOrigintPool.transform)
+        {
+            stackOrigin.gameObject.SetActive(false);
         }
     }
 
@@ -29,22 +34,42 @@ public class NetworkedObjectsManager : MonoBehaviour
         for (int i = 0; i < numberOfNetworkedObjectsToSpawn; ++i)
         {
             Transform networkedObject = _networkedObjectPool.GetChild(i);
-            Tuple<Vector3, Quaternion> validSpawnPoint = GetValidSpawnPoint(networkedObject.gameObject);
+            Tuple<Vector3, Quaternion> validObjectSpawnPoint = GetValidObjectSpawnPoint(networkedObject.gameObject);
             Quaternion randomRotation = Quaternion.Euler(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
 
-            networkedObject.SetPositionAndRotation(validSpawnPoint.Item1, randomRotation * validSpawnPoint.Item2);
+            networkedObject.SetPositionAndRotation(validObjectSpawnPoint.Item1, randomRotation * validObjectSpawnPoint.Item2);
             networkedObject.gameObject.SetActive(true);
         }
+
+        foreach (Transform stackOrigin in _stackOrigintPool.transform)
+        {
+            Tuple<Vector3, Quaternion> validStackSpawnPoint = GetValidStackOriginSpawnPoint(stackOrigin.gameObject);
+
+            stackOrigin.SetPositionAndRotation(validStackSpawnPoint.Item1, validStackSpawnPoint.Item2);
+            stackOrigin.gameObject.SetActive(true);
+        }
+
     }
 
-    private Tuple<Vector3, Quaternion> GetValidSpawnPoint(GameObject prefab)
+    private Tuple<Vector3, Quaternion> GetValidObjectSpawnPoint(GameObject prefab)
     {
         Tuple<Vector3, Quaternion>[] validPositions = GetSpawnPositions(
             objectBounds: Utilities.GetPrefabBounds(prefab),
             positionCount: 1,
             spawnLocation: FindSpawnPositions.SpawnLocation.HangingDown,
             labels: MRUKAnchor.SceneLabels.CEILING);
-        Debug.Assert(validPositions.Length > 0, $"[{nameof(NetworkedObjectsManager)}] {nameof(GetValidSpawnPoint)} error: invalid {nameof(validPositions)} array.");
+        Debug.Assert(validPositions.Length > 0, $"[{nameof(NetworkedObjectsManager)}] {nameof(GetValidObjectSpawnPoint)} error: invalid {nameof(validPositions)} array.");
+        return validPositions[0];
+    }
+
+    private Tuple<Vector3, Quaternion> GetValidStackOriginSpawnPoint(GameObject prefab)
+    {
+        Tuple<Vector3, Quaternion>[] validPositions = GetSpawnPositions(
+            objectBounds: Utilities.GetPrefabBounds(prefab),
+            positionCount: 1,
+            spawnLocation: FindSpawnPositions.SpawnLocation.OnTopOfSurfaces,
+            labels: MRUKAnchor.SceneLabels.FLOOR);
+        Debug.Assert(validPositions.Length > 0, $"[{nameof(NetworkedObjectsManager)}] {nameof(GetValidObjectSpawnPoint)} error: invalid {nameof(validPositions)} array.");
         return validPositions[0];
     }
 
