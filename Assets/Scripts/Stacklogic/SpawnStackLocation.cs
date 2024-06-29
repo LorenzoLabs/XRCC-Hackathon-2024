@@ -11,7 +11,7 @@ public class SpawnStackLocation : MonoBehaviour
     [SerializeField] private List<GameObject> validStacks;
 
     [SerializeField] private FindSpawnPositions spawnPositions;
-    [SerializeField] private AnchorPrefabSpawner spawner;
+    //[SerializeField] private AnchorPrefabSpawner spawner;
 
     // Start is called before the first frame update
     void Start()
