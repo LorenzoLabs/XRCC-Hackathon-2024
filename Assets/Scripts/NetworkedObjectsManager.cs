@@ -8,6 +8,7 @@ public class NetworkedObjectsManager : MonoBehaviour
     [SerializeField] private Transform _networkedObjectPool;
     [SerializeField] private Transform _stackOrigintPool;
     [SerializeField] private int _minNumberOfNetworkedObjects;
+    [SerializeField] private bool _spawnAllObjects;
 
     // Control variable to ensure spawning only happens once.
     private bool _isSpawned = false;
@@ -30,7 +31,8 @@ public class NetworkedObjectsManager : MonoBehaviour
         if (_isSpawned) return;
         _isSpawned = true;
 
-        int numberOfNetworkedObjectsToSpawn = Random.Range(Math.Max(_minNumberOfNetworkedObjects, _networkedObjectPool.childCount), _networkedObjectPool.childCount);
+        int numberOfNetworkedObjectsToSpawn = _spawnAllObjects ? _networkedObjectPool.childCount
+                                                               : Random.Range(Math.Max(_minNumberOfNetworkedObjects, _networkedObjectPool.childCount), _networkedObjectPool.childCount + 1);
         for (int i = 0; i < numberOfNetworkedObjectsToSpawn; ++i)
         {
             Transform networkedObject = _networkedObjectPool.GetChild(i);
