@@ -3272,8 +3272,8 @@ MonoBehaviour:
   AutoClients: 1
   ClientStartDelay: 0.1
   ServerPort: 0
-  DefaultRoomName: MultiplayerSession
-  InitialScenePath: Assets/Scenes/MultiplayerTestScene.unity
+  DefaultRoomName: StackOrDieGameSession
+  InitialScenePath: Assets/Scenes/MainScene.unity
   _currentStage: 0
   AutoConnectVirtualInstances: 1
   VirtualInstanceConnectDelay: 1
@@ -8676,79 +8676,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 905972911}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &758072108
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3162192551685010643, guid: 0ed028cd17933224681ecb70fde0e122,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3162192551685010643, guid: 0ed028cd17933224681ecb70fde0e122,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3162192551685010643, guid: 0ed028cd17933224681ecb70fde0e122,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3162192551685010643, guid: 0ed028cd17933224681ecb70fde0e122,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3162192551685010643, guid: 0ed028cd17933224681ecb70fde0e122,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3162192551685010643, guid: 0ed028cd17933224681ecb70fde0e122,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3162192551685010643, guid: 0ed028cd17933224681ecb70fde0e122,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3162192551685010643, guid: 0ed028cd17933224681ecb70fde0e122,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3162192551685010643, guid: 0ed028cd17933224681ecb70fde0e122,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3162192551685010643, guid: 0ed028cd17933224681ecb70fde0e122,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7092918161725693071, guid: 0ed028cd17933224681ecb70fde0e122,
-        type: 3}
-      propertyPath: m_Name
-      value: WoodBox_NetworkedObject
-      objectReference: {fileID: 0}
-    - target: {fileID: 7990594802207296140, guid: 0ed028cd17933224681ecb70fde0e122,
-        type: 3}
-      propertyPath: SortKey
-      value: 2875261732
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0ed028cd17933224681ecb70fde0e122, type: 3}
 --- !u!1 &781317617
 GameObject:
   m_ObjectHideFlags: 0
@@ -21369,4 +21296,3 @@ SceneRoots:
   - {fileID: 1060500300}
   - {fileID: 295829322}
   - {fileID: 2034331689}
-  - {fileID: 758072108}
