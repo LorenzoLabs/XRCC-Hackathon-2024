@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - NetworkedObject
+  - SamplesInfoPanel
+  - grabbable
   layers:
   - Default
   - TransparentFX
