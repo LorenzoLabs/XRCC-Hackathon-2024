@@ -4,18 +4,44 @@ using UnityEngine;
 
 public class StackOrigin : MonoBehaviour
 {
-    //this class has the location of the Stackable object
+    [SerializeField] private WinCondition WinCondition;
 
-    
-    // Start is called before the first frame update
+    [SerializeField] private GameObject _field;
+
+    private Material _fieldDefaultMaterial;
+    [SerializeField] private Material _fieldWonMaterial;
+
+    private Renderer _fieldRenderer;
+
     void Start()
     {
-        
+        _fieldRenderer = _field.GetComponent<Renderer>();
+        _fieldDefaultMaterial = _fieldRenderer.material;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (WinCondition.isWon)
+        {
+
+            _fieldRenderer.material = _fieldWonMaterial;
+        }
+        else
+        {
+            SetMaterial(_fieldDefaultMaterial, _field);
+        }
+    }
+
+    private void SetMaterial(Material material, GameObject obj)
+    {
+        Renderer renderer = obj.GetComponent<Renderer>();
+        if (renderer != null)
+        {
+            renderer.material = material;
+        }
+        else
+        {
+            Debug.LogWarning("Renderer component not found on object: " + obj.name);
+        }
     }
 }
