@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3886993398865099771}
   m_Layer: 23
   m_Name: Duck_XRCC
-  m_TagString: Untagged
+  m_TagString: grabbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,8 +159,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f237b1a578118ee41a0f595550a879e9, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.711
+  m_Pitch: 0.6
   Loop: 0
   Mute: 0
   Spatialize: 0

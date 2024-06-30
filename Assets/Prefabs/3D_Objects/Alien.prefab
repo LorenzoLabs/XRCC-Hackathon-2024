@@ -218,6 +218,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Alien
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9d55326ba338cbd4fbeb413bdcd5dd3e,
+        type: 3}
+      propertyPath: m_TagString
+      value: grabbable
+      objectReference: {fileID: 0}
     - target: {fileID: 7640485994554180175, guid: 9d55326ba338cbd4fbeb413bdcd5dd3e,
         type: 3}
       propertyPath: m_Name

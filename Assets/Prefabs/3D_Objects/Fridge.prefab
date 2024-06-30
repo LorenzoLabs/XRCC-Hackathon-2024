@@ -63,6 +63,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fridge
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 14d30f1e903e1fa4a985c8fac2898da1,
+        type: 3}
+      propertyPath: m_TagString
+      value: grabbable
+      objectReference: {fileID: 0}
     - target: {fileID: 4772740960092250769, guid: 14d30f1e903e1fa4a985c8fac2898da1,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
