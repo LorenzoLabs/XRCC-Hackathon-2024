@@ -47,21 +47,18 @@ public class CollisionAudio : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+    public void HandleCollision(Collision collision, CollisionType otherCollisionType)
     {
-        CollisionAudio otherCollisionAudio = collision.gameObject.GetComponent<CollisionAudio>();
+        Debug.Log($"Handling collision between {objectCollisionType} and {otherCollisionType}");
 
-        if (otherCollisionAudio != null)
+        string key = objectCollisionType.ToString() + "_" + otherCollisionType.ToString();
+
+        if (collisionSettings.ContainsKey(key))
         {
-            string key = objectCollisionType.ToString() + "_" + otherCollisionAudio.objectCollisionType.ToString();
+            CollisionSettings settings = collisionSettings[key];
+            lowPassFilter.cutoffFrequency = settings.cutoffFrequency;
 
-            if (collisionSettings.ContainsKey(key))
-            {
-                CollisionSettings settings = collisionSettings[key];
-                lowPassFilter.cutoffFrequency = settings.cutoffFrequency;
-
-                PlayRandomOneShot();
-            }
+            PlayRandomOneShot();
         }
     }
 
@@ -71,6 +68,11 @@ public class CollisionAudio : MonoBehaviour
         {
             AudioClip clip = oneShotSounds[Random.Range(0, oneShotSounds.Count)];
             audioSource.PlayOneShot(clip);
+            Debug.Log($"Playing audio clip: {clip.name}");
+        }
+        else
+        {
+            Debug.LogWarning("No audio clips available in oneShotSounds list.");
         }
     }
 }
