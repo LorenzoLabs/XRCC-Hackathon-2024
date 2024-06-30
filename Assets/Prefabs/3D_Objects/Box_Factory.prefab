@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6597782007345951411}
   m_Layer: 10
   m_Name: Box_Factory
-  m_TagString: Untagged
+  m_TagString: grabbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

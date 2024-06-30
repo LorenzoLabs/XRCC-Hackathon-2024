@@ -83,6 +83,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kangoorat
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2f3ea0c9b8fce5348a8471e9fcd41b99,
+        type: 3}
+      propertyPath: m_TagString
+      value: grabbable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

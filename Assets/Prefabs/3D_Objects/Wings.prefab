@@ -218,6 +218,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wings
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4773ed5e07682404e9cab7cc96400ac7,
+        type: 3}
+      propertyPath: m_TagString
+      value: grabbable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

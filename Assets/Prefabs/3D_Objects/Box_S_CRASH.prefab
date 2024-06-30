@@ -6116,7 +6116,6 @@ GameObject:
   - component: {fileID: 4954732185670454325}
   - component: {fileID: 1404327022507247957}
   - component: {fileID: 2511263811009504819}
-  - component: {fileID: 4418549997384248992}
   m_Layer: 0
   m_Name: Box_S_CRASH
   m_TagString: Untagged
@@ -6371,24 +6370,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &4418549997384248992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7907863643154221949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd2b5a4a69a12104a80119a42f2e4a07, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 2087762019808688228, guid: 7a9744b1057895c4480579ccd32c6c9d, type: 3}
-  - {fileID: 5205288831813943588, guid: 0d5d212d223cb0d4f9502e3ab6ffeb11, type: 3}
-  - {fileID: 6022419052054312329, guid: 1e1e05a6c1a5e614dbc34714f4928668, type: 3}
-  - {fileID: 6022419052054312329, guid: 1e1e05a6c1a5e614dbc34714f4928668, type: 3}
-  lifeTime: 10
 --- !u!1 &7908828034894902836
 GameObject:
   m_ObjectHideFlags: 0
@@ -7101,7 +7082,9 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0c1067d79ee65c940b3135d92f1929de, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5087797087692568969, guid: 91f5c8f07dadc0e499a9a45373ec0dfa, type: 3}
+    - {fileID: -6333239365160271360, guid: 91f5c8f07dadc0e499a9a45373ec0dfa, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -7398,7 +7381,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 126.443
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5087797087692568969, guid: 91f5c8f07dadc0e499a9a45373ec0dfa, type: 3}
+    - {fileID: -6333239365160271360, guid: 91f5c8f07dadc0e499a9a45373ec0dfa, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -7700,7 +7685,9 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 15415c49a07f75d4b87d4407e0ecb26f, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5087797087692568969, guid: 91f5c8f07dadc0e499a9a45373ec0dfa, type: 3}
+    - {fileID: -6333239365160271360, guid: 91f5c8f07dadc0e499a9a45373ec0dfa, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -8002,7 +7989,9 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 15415c49a07f75d4b87d4407e0ecb26f, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5087797087692568969, guid: 91f5c8f07dadc0e499a9a45373ec0dfa, type: 3}
+    - {fileID: -6333239365160271360, guid: 91f5c8f07dadc0e499a9a45373ec0dfa, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -8642,7 +8631,9 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 15415c49a07f75d4b87d4407e0ecb26f, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5087797087692568969, guid: 91f5c8f07dadc0e499a9a45373ec0dfa, type: 3}
+    - {fileID: -6333239365160271360, guid: 91f5c8f07dadc0e499a9a45373ec0dfa, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -8939,7 +8930,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5087797087692568969, guid: 91f5c8f07dadc0e499a9a45373ec0dfa, type: 3}
+    - {fileID: -6333239365160271360, guid: 91f5c8f07dadc0e499a9a45373ec0dfa, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
