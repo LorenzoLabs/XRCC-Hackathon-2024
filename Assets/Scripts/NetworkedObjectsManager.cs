@@ -30,24 +30,25 @@ public class NetworkedObjectsManager : MonoBehaviour
         if (_isSpawned) return;
         _isSpawned = true;
 
-        int numberOfNetworkedObjectsToSpawn = Random.Range(Math.Max(_minNumberOfNetworkedObjects, _networkedObjectPool.childCount), _networkedObjectPool.childCount);
-        for (int i = 0; i < numberOfNetworkedObjectsToSpawn; ++i)
+        int numberOfNetworkedObjectsToSpawn = _networkedObjectPool.childCount; /* all */ //Random.Range(Math.Max(_minNumberOfNetworkedObjects, _networkedObjectPool.childCount), _networkedObjectPool.childCount);
+        foreach (Transform networkedObject in _networkedObjectPool.transform)
+        // for (int i = 0; i < numberOfNetworkedObjectsToSpawn; ++i)
         {
-            Transform networkedObject = _networkedObjectPool.GetChild(i);
-            Tuple<Vector3, Quaternion> validObjectSpawnPoint = GetValidObjectSpawnPoint(networkedObject.gameObject);
-            Quaternion randomRotation = Quaternion.Euler(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
+            // Transform networkedObject = _networkedObjectPool.GetChild(i);
+            // Tuple<Vector3, Quaternion> validObjectSpawnPoint = GetValidObjectSpawnPoint(networkedObject.gameObject);
+            // Quaternion randomRotation = Quaternion.Euler(Random.Range(0f, 360f), Random.Range(0f, 360f), Random.Range(0f, 360f));
 
-            networkedObject.SetPositionAndRotation(validObjectSpawnPoint.Item1, randomRotation * validObjectSpawnPoint.Item2);
+            // networkedObject.SetPositionAndRotation(validObjectSpawnPoint.Item1, randomRotation * validObjectSpawnPoint.Item2);
             networkedObject.gameObject.SetActive(true);
         }
 
-        foreach (Transform stackOrigin in _stackOrigintPool.transform)
-        {
-            Tuple<Vector3, Quaternion> validStackSpawnPoint = GetValidStackOriginSpawnPoint(stackOrigin.gameObject);
-
-            stackOrigin.SetPositionAndRotation(validStackSpawnPoint.Item1, validStackSpawnPoint.Item2);
-            stackOrigin.gameObject.SetActive(true);
-        }
+        // foreach (Transform stackOrigin in _stackOrigintPool.transform)
+        // {
+        //    Tuple<Vector3, Quaternion> validStackSpawnPoint = GetValidStackOriginSpawnPoint(stackOrigin.gameObject);
+        //
+        //      stackOrigin.SetPositionAndRotation(validStackSpawnPoint.Item1, validStackSpawnPoint.Item2);
+        //     stackOrigin.gameObject.SetActive(true);
+        // }
 
     }
 
