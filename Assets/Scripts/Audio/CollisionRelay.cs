@@ -2,26 +2,50 @@ using UnityEngine;
 
 public class CollisionRelay : MonoBehaviour
 {
-    public CollisionAudio.CollisionType objectCollisionType;
-    private CollisionAudio collisionAudio;
+    private CollisionAudioManager _manager;
+    private CollisionAudioManager.CollisionType _objectCollisionType;
 
-    void Start()
+    public void Initialize(CollisionAudioManager manager, CollisionAudioManager.CollisionType objectCollisionType)
     {
-        collisionAudio = GetComponentInChildren<CollisionAudio>();
-        if (collisionAudio == null)
+        _manager = manager;
+        _objectCollisionType = objectCollisionType;
+        Debug.Log($"CollisionRelay initialized for {gameObject.name} with collision type {_objectCollisionType}");
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        string colliderName = gameObject.name;
+        string otherObjectName = collision.gameObject.name;
+
+        Debug.Log($"CollisionRelay: OnCollisionEnter triggered for {colliderName} with {otherObjectName}");
+        
+        var audioManager = FindAudioManager();
+        if (audioManager != null)
         {
-            Debug.LogError("CollisionAudio component not found in children.");
+            Debug.Log($"Collision detected between {colliderName} and {otherObjectName}, relayed to {audioManager.gameObject.name}");
+            audioManager.HandleCollision(collision, _objectCollisionType);
+        }
+        else
+        {
+            Debug.LogWarning($"No CollisionAudioManager found in hierarchy for {colliderName}");
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+    private CollisionAudioManager FindAudioManager()
     {
-        CollisionRelay otherRelay = collision.gameObject.GetComponent<CollisionRelay>();
-
-        if (otherRelay != null && collisionAudio != null)
+        // Find the "audio" child object that has the CollisionAudioManager component
+        var parent = transform.root; // Assuming the "audio" object is within the root of this prefab
+        foreach (Transform child in parent)
         {
-            Debug.Log($"Collision detected between {gameObject.name} and {collision.gameObject.name}");
-            collisionAudio.HandleCollision(collision, otherRelay.objectCollisionType);
+            if (child.name == "audio")
+            {
+                var audioManager = child.GetComponent<CollisionAudioManager>();
+                if (audioManager != null)
+                {
+                    return audioManager;
+                }
+            }
         }
+        return null;
     }
 }
